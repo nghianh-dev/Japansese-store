@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn - Sakura Bites</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/menu-page.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-fan logo-icon"></i> Sakura Bites</h1>
+                <p class="tagline">ẨM THỰC NHẬT BẢN ĐÍCH THỰC</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">Giới Thiệu</a></li>
+                    <li><a href="index.html#menu">Thực Đơn</a></li>
+                    <li><a href="index.html#testimonials">Đánh Giá</a></li>
+                    <li><a href="index.html#contact" class="btn-primary">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Banner -->
+    <section class="menu-banner">
+        <div class="container">
+            <h2>Thực Đơn Đầy Đủ</h2>
+            <p>Khám phá hương vị Nhật Bản đích thực tại Sakura Bites</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm món ăn...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-results" id="search-results">
+                    <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
+                </div>
+            </div>
+
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">Tất Cả</button>
+                <button class="category-tab" data-category="appetizers">Khai Vị</button>
+                <button class="category-tab" data-category="sushi">Sushi & Sashimi</button>
+                <button class="category-tab" data-category="main">Món Chính</button>
+                <button class="category-tab" data-category="rice">Cơm & Mì</button>
+                <button class="category-tab" data-category="drinks">Đồ Uống</button>
+            </div>
+
+            <div class="menu-list">
+                <!-- Khai Vị -->
+                <div class="menu-category" id="appetizers">
+                    <h3 class="category-title">Khai Vị</h3>
+
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/tempura.jpeg" alt="Tempura">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Tempura Hải Sản</h4>
+                                <p>Tôm, mực và rau củ tẩm bột chiên giòn theo công thức truyền thống</p>
+                                <span class="price">160.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/tempura.jpeg" alt="Tempura Rau Củ">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Tempura Rau Củ</h4>
+                                <p>Các loại rau củ theo mùa tẩm bột chiên giòn</p>
+                                <span class="price">120.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/gyoza.jpeg" alt="Gyoza">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Gyoza</h4>
+                                <p>Bánh xếp Nhật Bản nhân thịt heo và rau thơm</p>
+                                <span class="price">140.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/edamame.jpeg" alt="Edamame">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Edamame</h4>
+                                <p>Đậu nành Nhật Bản hấp với muối biển</p>
+                                <span class="price">80.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sushi & Sashimi -->
+                <div class="menu-category" id="sushi">
+                    <h3 class="category-title">Sushi & Sashimi</h3>
+
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/sushi.jpeg" alt="Sushi Đặc Biệt">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Sushi Đặc Biệt</h4>
+                                <p>Sushi cá hồi, cá ngừ và bạch tuộc tươi ngon với gạo Nhật chính hiệu</p>
+                                <span class="price">180.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/sashimi.jpeg" alt="Sashimi Cá Hồi">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Sashimi Cá Hồi</h4>
+                                <p>Cá hồi Na Uy cắt lát mỏng phục vụ kèm wasabi và gừng hồng</p>
+                                <span class="price">220.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/sushi.jpeg" alt="Maki Set">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Maki Set</h4>
+                                <p>Bộ 3 loại cuộn sushi: California, Spicy Tuna và Avocado</p>
+                                <span class="price">200.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/sashimi.jpeg" alt="Sashimi Thập Cẩm">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Sashimi Thập Cẩm</h4>
+                                <p>Hỗn hợp các loại cá và hải sản tươi ngon nhất trong ngày</p>
+                                <span class="price">280.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Món Chính -->
+                <div class="menu-category" id="main">
+                    <h3 class="category-title">Món Chính</h3>
+
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/ramen.jpeg" alt="Ramen Tonkotsu">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Ramen Tonkotsu</h4>
+                                <p>Súp xương hầm 12 giờ với mì tươi, thịt heo chashu và trứng hột vịt muối</p>
+                                <span class="price">150.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/teriyaki.jpeg" alt="Gà Teriyaki">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Gà Teriyaki</h4>
+                                <p>Đùi gà không xương nướng sốt teriyaki, phục vụ kèm cơm trắng</p>
+                                <span class="price">170.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/udon.jpeg" alt="Udon Hải Sản">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Udon Hải Sản</h4>
+                                <p>Mì udon với hải sản tươi ngon trong nước dùng dashi</p>
+                                <span class="price">160.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/katsu.jpeg" alt="Tonkatsu">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Tonkatsu</h4>
+                                <p>Thịt heo tẩm bột chiên xù, phục vụ kèm cơm và rau</p>
+                                <span class="price">180.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cơm & Mì -->
+                <div class="menu-category" id="rice">
+                    <h3 class="category-title">Cơm & Mì</h3>
+
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/donburi.jpeg" alt="Oyakodon">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Oyakodon</h4>
+                                <p>Cơm với thịt gà và trứng sốt đặc biệt</p>
+                                <span class="price">140.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/yakisoba.jpeg" alt="Yakisoba">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Yakisoba</h4>
+                                <p>Mì xào với thịt và rau theo phong cách Nhật Bản</p>
+                                <span class="price">150.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/donburi.jpeg" alt="Gyudon">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Gyudon</h4>
+                                <p>Cơm với thịt bò xào hành tây</p>
+                                <span class="price">160.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/yakisoba.jpeg" alt="Yakiudon">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Yakiudon</h4>
+                                <p>Mì udon xào với hải sản và rau</p>
+                                <span class="price">170.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đồ Uống -->
+                <div class="menu-category" id="drinks">
+                    <h3 class="category-title">Đồ Uống</h3>
+
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/sake.jpeg" alt="Sake Premium">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Sake Premium</h4>
+                                <p>Rượu gạo Nhật Bản cao cấp, hương vị tinh tế và thanh nhẹ</p>
+                                <span class="price">220.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/matcha.jpeg" alt="Trà Matcha">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Trà Matcha</h4>
+                                <p>Trà xanh Nhật Bản truyền thống</p>
+                                <span class="price">60.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/sake.jpeg" alt="Bia Asahi">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Bia Asahi</h4>
+                                <p>Bia Nhật Bản nhập khẩu</p>
+                                <span class="price">80.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/matcha.jpeg" alt="Ramune">
+                            </div>
+                            <div class="menu-card-content">
+                                <h4>Ramune</h4>
+                                <p>Nước ngọt truyền thống của Nhật Bản</p>
+                                <span class="price">50.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="menu-cta">
+        <div class="container">
+            <h2>Đặt Bàn Ngay Hôm Nay</h2>
+            <p>Trải nghiệm ẩm thực Nhật Bản đích thực tại Sakura Bites</p>
+            <a href="index.html#contact" class="btn-primary">Đặt Bàn Ngay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Sakura Bites</h3>
+                    <p>Ẩm thực Nhật Bản đích thực</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Địa Chỉ</h4>
+                        <p>123 Đường Lê Lợi, Quận 1</p>
+                        <p>TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Giờ Mở Cửa</h4>
+                        <p>Thứ 2 - Thứ 6: 11:00 - 22:00</p>
+                        <p>Thứ 7 - Chủ Nhật: 10:00 - 23:00</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Liên Hệ</h4>
+                        <p>Email: info@sakurabites.com</p>
+                        <p>Điện thoại: (028) 1234 5678</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sakura Bites. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
