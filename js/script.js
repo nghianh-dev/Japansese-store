@@ -38,10 +38,10 @@ navLinks.forEach(link => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
@@ -96,11 +96,11 @@ const reservationForm = document.querySelector('.reservation-form');
 if (reservationForm) {
     reservationForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Simple form validation
         const formInputs = reservationForm.querySelectorAll('input, select');
         let isValid = true;
-        
+
         formInputs.forEach(input => {
             if (!input.value) {
                 isValid = false;
@@ -109,7 +109,7 @@ if (reservationForm) {
                 input.style.borderColor = '';
             }
         });
-        
+
         if (isValid) {
             // In a real application, you would send the form data to a server
             alert('Đặt bàn thành công! Chúng tôi sẽ liên hệ với bạn sớm.');
@@ -123,11 +123,11 @@ if (reservationForm) {
 // Add CSS class for animation when elements come into view
 function animateOnScroll() {
     const elements = document.querySelectorAll('.menu-item, .about-image, .about-text, .testimonial');
-    
+
     elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
-        
+
         if (elementPosition < screenPosition) {
             element.classList.add('fade-in');
         }
@@ -142,5 +142,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add fade-in class to elements that should animate on page load
     document.querySelectorAll('.hero-content, .section-header').forEach(el => {
         el.classList.add('fade-in');
+    });
+
+    // Back to Top Button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('active');
+        } else {
+            backToTopButton.classList.remove('active');
+        }
+    });
+
+    // Smooth scroll to top when clicked
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });

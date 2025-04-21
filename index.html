@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakura Bites - Ẩm Thực Nhật Bản Đích Thực</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="images/hero-bg.jpeg" as="image">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Sakura Bites - Ẩm thực Nhật Bản đích thực tại Việt Nam. Trải nghiệm hương vị Nhật Bản với các món ăn truyền thống được chế biến từ nguyên liệu tươi ngon nhất.">
+    <meta name="keywords" content="Nhà hàng Nhật Bản, Sushi, Ramen, Tempura, Ẩm thực Nhật Bản, Sakura Bites">
+    <meta name="author" content="Sakura Bites Restaurant">
 </head>
 <body>
     <!-- Header -->
@@ -50,7 +61,7 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="images/restaurant.jpeg" alt="Sakura Bites Restaurant">
+                    <img src="images/restaurant.jpeg" alt="Sakura Bites Restaurant" loading="lazy">
                 </div>
                 <div class="about-text">
                     <h3>Câu Chuyện Của Chúng Tôi</h3>
@@ -86,7 +97,7 @@
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="menu-image">
-                        <img src="images/sushi.jpeg" alt="Sushi">
+                        <img src="images/sushi.jpeg" alt="Sushi" loading="lazy">
                     </div>
                     <div class="menu-details">
                         <h3>Sushi Đặc Biệt</h3>
@@ -96,7 +107,7 @@
                 </div>
                 <div class="menu-item">
                     <div class="menu-image">
-                        <img src="images/ramen.jpeg" alt="Ramen">
+                        <img src="images/ramen.jpeg" alt="Ramen" loading="lazy">
                     </div>
                     <div class="menu-details">
                         <h3>Ramen Tonkotsu</h3>
@@ -106,7 +117,7 @@
                 </div>
                 <div class="menu-item">
                     <div class="menu-image">
-                        <img src="images/tempura.jpeg" alt="Tempura">
+                        <img src="images/tempura.jpeg" alt="Tempura" loading="lazy">
                     </div>
                     <div class="menu-details">
                         <h3>Tempura Hải Sản</h3>
@@ -116,7 +127,7 @@
                 </div>
                 <div class="menu-item">
                     <div class="menu-image">
-                        <img src="images/sake.jpeg" alt="Sake">
+                        <img src="images/sake.jpeg" alt="Sake" loading="lazy">
                     </div>
                     <div class="menu-details">
                         <h3>Sake Premium</h3>
@@ -144,7 +155,7 @@
                         <p>"Sushi ở đây thực sự tuyệt vời! Tôi đã từng đến Nhật và có thể nói rằng hương vị ở Sakura Bites rất đích thực."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/person1.jpg" alt="Nguyễn Thị Mai">
+                        <img src="images/person1.jpg" alt="Nguyễn Thị Mai" loading="lazy">
                         <div>
                             <h4>Nguyễn Thị Mai</h4>
                             <div class="stars">
@@ -162,7 +173,7 @@
                         <p>"Không gian quán rất đẹp và thanh lịch. Ramen Tonkotsu là món tôi yêu thích nhất, súp thơm và đậm đà."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/person2.jpg" alt="Trần Văn Hùng">
+                        <img src="images/person2.jpg" alt="Trần Văn Hùng" loading="lazy">
                         <div>
                             <h4>Trần Văn Hùng</h4>
                             <div class="stars">
@@ -180,7 +191,7 @@
                         <p>"Đội ngũ nhân viên rất thân thiện và chuyên nghiệp. Tôi đặc biệt ấn tượng với cách họ giới thiệu về từng món ăn."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/person3.jpg" alt="Lê Thị Hương">
+                        <img src="images/person3.jpg" alt="Lê Thị Hương" loading="lazy">
                         <div>
                             <h4>Lê Thị Hương</h4>
                             <div class="stars">
@@ -273,6 +284,16 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Quay lên đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Core scripts -->
     <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
+
+    <!-- Performance optimization -->
+    <script src="js/optimize.js" async></script>
 </body>
 </html>
